@@ -119,7 +119,7 @@ module Shoryuken
       Thread.list.each do |thread|
         logger.info { "Thread TID-#{thread.object_id.to_s(36)} #{thread['label']}" }
         if thread.backtrace
-          logger.info { thread.backtrace.join("\n") }
+          # logger.info { thread.backtrace.join("\n") }
         else
           logger.info { '<no backtrace available>' }
         end
